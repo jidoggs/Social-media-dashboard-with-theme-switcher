@@ -17,7 +17,7 @@ html {
   --hoverCard: #dde2f3;
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   html {
     font-size: 50%;
   }
@@ -73,7 +73,7 @@ body::after {
   z-index: -2;
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   body::after {
     height: 26rem;
     border-radius: 3rem;
@@ -107,7 +107,17 @@ body::after {
   width: calc((100% - 3 * 3rem) / 4);
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
+  .row .col-1-of-4 {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .row .col-1-of-4:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
   .row .col-1-of-4 {
     width: 100%;
     margin-bottom: 3rem;
@@ -121,13 +131,20 @@ body::after {
   width: calc((100% - 3.3 * 3rem) / 4);
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .row .col-2-of-4 {
     width: 100%;
     margin-bottom: 2rem;
   }
   .row .col-2-of-4:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .row .col-2-of-4 {
+    width: calc((100% - 6 * 1.5rem) / 4);
+    height: 10rem;
   }
 }
 
@@ -146,7 +163,7 @@ body::after {
   margin-bottom: 4rem;
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .features__header {
     display: block;
   }
@@ -162,7 +179,7 @@ body::after {
   color: var(--textColor);
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .features__headtag {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
@@ -183,7 +200,7 @@ body::after {
   display: flex;
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .features__switch {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -264,7 +281,7 @@ body::after {
   margin-bottom: 6rem !important;
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .features__cards {
     display: block;
   }
@@ -301,6 +318,12 @@ body::after {
   text-transform: initial;
   font-weight: 600;
   font-size: inherit;
+}
+
+@media screen and (max-width: 37.5em) {
+  .features__cards .fourbyone .social p {
+    font-size: .8rem;
+  }
 }
 
 .features__cards .fourbyone .plusOrMinus {
@@ -403,7 +426,7 @@ body::after {
   margin-bottom: 3rem !important;
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .features__metrics-cards {
     margin-bottom: 2rem !important;
   }
@@ -491,7 +514,7 @@ body::after {
 
 @media screen and (max-width: 37.5em) {
   .features__metrics-cards .containerSmall .metrics-index .plusOrMinus {
-    font-size: .8rem;
+    font-size: .6rem;
   }
   .features__metrics-cards .containerSmall .metrics-index .plusOrMinus img {
     margin-right: .25rem;
@@ -519,7 +542,7 @@ body::after {
 
 @media screen and (max-width: 37.5em) {
   .features__metrics-cards .containerSmall .metrics-index h5 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -528,7 +551,7 @@ body::after {
   color: var(--textColor);
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .fishy h2 {
     font-size: 1.8rem;
   }
@@ -540,7 +563,7 @@ body::after {
   color: var(--gist);
 }
 
-@media screen and (max-width: 23.4375em) {
+@media screen and (max-width: 23.43751em) {
   .attribution {
     margin-top: 3rem;
   }

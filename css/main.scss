@@ -41,7 +41,7 @@ $borderYouTube: hsl(348, 97%, 39%);
 //media Queries
 @mixin respond($breakpoint) {
   @if $breakpoint == mobile {
-    @media screen and (max-width: 23.4375em) {
+    @media screen and (max-width: 23.43751em) {
       //375px
       @content;
     }
@@ -178,7 +178,7 @@ body {
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 3rem;
-$gutter-horizontal-small: 3rem;
+$gutter-horizontal-small: 1.5rem;
 
 .row {
   max-width: $grid-width;
@@ -207,6 +207,13 @@ $gutter-horizontal-small: 3rem;
         margin-bottom: 0;
       }
     }
+    @include respond(mobile-land) {
+      width: 100%;
+      margin-bottom: 3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .col-2-of-4 {
     width: calc((100% - 3.3 * #{$gutter-horizontal}) / 4);
@@ -216,6 +223,10 @@ $gutter-horizontal-small: 3rem;
       &:last-child{
         margin-bottom: 0;
       }
+    }
+    @include respond(mobile-land){
+      width: calc((100% - 6 * #{$gutter-horizontal-small}) / 4);
+      height: 10rem;
     }
   }
   
@@ -338,6 +349,11 @@ $gutter-horizontal-small: 3rem;
         padding-bottom: 1.5rem;
         display: flex;
         align-items: center;
+        // @include respond(mobile-land){
+        //   img {
+        //     width: .2rem;
+        //   }
+        // }
 
         img {
           margin-right: 0.5rem;
@@ -349,7 +365,7 @@ $gutter-horizontal-small: 3rem;
           font-weight: 600;
           font-size: inherit;
         }
-        @include respond(maobile-land) {
+        @include respond(mobile-land) {
           p{font-size: .8rem;}
         }
       }
@@ -444,6 +460,8 @@ $gutter-horizontal-small: 3rem;
       margin-bottom: 2rem !important;
     }
 
+
+
     [class^="col-"] {
       background-color: var(--cardColor);
       border-radius: 0.5rem;
@@ -494,7 +512,7 @@ $gutter-horizontal-small: 3rem;
           font-size: 1.1rem;
 
           @include respond(mobile-land){
-            font-size: .8rem;
+            font-size: .6rem;
 
             img{margin-right: .25rem;}
           }
@@ -515,7 +533,7 @@ $gutter-horizontal-small: 3rem;
             font-size: 2.3rem;
           }
           @include respond(mobile-land){
-            font-size: 1.8rem;
+            font-size: 1.3rem;
           }
         }
       }
