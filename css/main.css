@@ -27,6 +27,12 @@ html {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 @media screen and (min-width: 37.5em) {
   html {
     font-size: 53.125%;
@@ -78,6 +84,13 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  body::after {
+    height: 30rem;
+    border-radius: 3rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   body::after {
     height: 30rem;
     border-radius: 3rem;
@@ -145,6 +158,16 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .row .col-1-of-4 {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .row .col-1-of-4:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .row .col-2-of-4 {
   width: calc((100% - 3.3 * 3rem) / 4);
 }
@@ -157,6 +180,16 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .row .col-2-of-4 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .row .col-2-of-4:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .row .col-2-of-4 {
     width: 100%;
     margin-bottom: 2rem;
@@ -194,6 +227,13 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__header {
+    display: block;
+    margin-bottom: 6rem;
+  }
+}
+
 .features__headtag h2 {
   font-size: 2.5em;
   color: var(--darkertextColor);
@@ -205,6 +245,21 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__headtag {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: solid 0.2rem var(--textColor);
+  }
+  .features__headtag h2 {
+    font-size: 3.1rem;
+  }
+  .features__headtag h4 {
+    font-size: 1.85rem;
+    padding-top: .8rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__headtag {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
@@ -236,6 +291,17 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__switch {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .features__switch h4 {
   font-size: 1.3rem;
   color: var(--textColor);
@@ -243,6 +309,12 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__switch h4 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__switch h4 {
     font-size: 2rem;
   }
@@ -338,6 +410,12 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__cards .fourbyone {
+    padding: 5rem 0;
+  }
+}
+
 .features__cards .fourbyone .social {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -387,6 +465,12 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__cards .fourbyone .social p {
+    font-size: 1.4rem;
+  }
+}
+
 .features__cards .fourbyone .plusOrMinus {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -430,6 +514,13 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__cards .fourbyone .plusOrMinus img {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+}
+
 .features__cards .fourbyone .plusOrMinus p {
   letter-spacing: initial;
   text-transform: initial;
@@ -444,6 +535,12 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__cards .fourbyone .plusOrMinus p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__cards .fourbyone .plusOrMinus p {
     font-size: 1.4rem;
   }
@@ -474,6 +571,12 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__cards .fourbyone h3 {
+    font-size: 6rem;
+  }
+}
+
 .features__cards .fourbyone p {
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
@@ -495,6 +598,13 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__cards .fourbyone p {
+    font-size: 1.4rem;
+    letter-spacing: 0.6rem;
+  }
+}
+
 .features__cards .fourbyone:active, .features__cards .fourbyone:hover {
   background-color: var(--hoverCard);
   cursor: pointer;
@@ -506,6 +616,13 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__cards [class^="col-"] {
+    border-radius: 0.6rem;
+    border-top: 0.6rem solid;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__cards [class^="col-"] {
     border-radius: 0.6rem;
     border-top: 0.6rem solid;
@@ -539,6 +656,13 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__cards [class^="col-"]:nth-child(3)::after {
+    top: -0.6rem;
+    border-radius: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__cards [class^="col-"]:nth-child(3)::after {
     top: -0.6rem;
     border-radius: 0.6rem;
@@ -595,6 +719,12 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__metrics-cards .containerSmall {
+    padding: 3rem 4rem 3rem 3rem;
+  }
+}
+
 .features__metrics-cards .containerSmall .metrics-title {
   margin-bottom: 2rem;
   display: -webkit-box;
@@ -631,12 +761,24 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__metrics-cards .containerSmall .metrics-title h6 {
+    font-size: 1.6rem;
+  }
+}
+
 .features__metrics-cards .containerSmall .metrics-title img {
   height: 1.5rem;
   width: auto;
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__metrics-cards .containerSmall .metrics-title img {
+    height: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__metrics-cards .containerSmall .metrics-title img {
     height: 2.4rem;
   }
@@ -700,6 +842,12 @@ body::after {
   }
 }
 
+@media screen and (max-width: 26.5625em) {
+  .features__metrics-cards .containerSmall .metrics-index .plusOrMinus {
+    font-size: 1.6rem;
+  }
+}
+
 .features__metrics-cards .containerSmall .metrics-index .plus {
   color: #1db489;
 }
@@ -720,6 +868,12 @@ body::after {
 }
 
 @media screen and (max-width: 23.5em) {
+  .features__metrics-cards .containerSmall .metrics-index h5 {
+    font-size: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
   .features__metrics-cards .containerSmall .metrics-index h5 {
     font-size: 3.8rem;
   }

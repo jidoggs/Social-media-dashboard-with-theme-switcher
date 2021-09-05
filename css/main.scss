@@ -51,12 +51,12 @@ $borderYouTube: hsl(348, 97%, 39%);
       @content;
     }
   }
-  // @if $breakpoint == mobile {
-  //   @media screen and (max-width: 23.4375em) {
-  //     //768px
-  //     @content;
-  //   }
-  // }
+  @if $breakpoint == mobile-large {
+    @media screen and (max-width: 26.5625em) {
+      //425px
+      @content;
+    }
+  }
   @if $breakpoint == mobile-land {
     @media screen and (min-width: 37.5em) {
       //600px
@@ -96,6 +96,10 @@ html {
   font-size: 62.5%; // 1rem = 10px 10/16*100 62.5%
 
   @include respond(mobile) {
+    // 1rem = 8px  8/16*100 50%
+    font-size: 50%;
+  };
+  @include respond(mobile-large) {
     // 1rem = 8px  8/16*100 50%
     font-size: 50%;
   };
@@ -177,6 +181,10 @@ body {
       height: 30rem;
       border-radius: 3rem;
     }
+    @include respond(mobile-large){
+      height: 30rem;
+      border-radius: 3rem;
+    }
 
     @include respond(mobile-land){
       height: 15.8rem;
@@ -232,6 +240,13 @@ $gutter-horizontal-small: 1.5rem;
         margin-bottom: 0;
       }
     }
+    @include respond(mobile-large){
+      width: 100%;
+      margin-bottom: 3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .col-2-of-4 {
     width: calc((100% - 3.3 * #{$gutter-horizontal}) / 4);
@@ -242,6 +257,13 @@ $gutter-horizontal-small: 1.5rem;
     }
     
     @include respond(mobile){
+      width: 100%;
+      margin-bottom: 2rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    @include respond(mobile-large){
       width: 100%;
       margin-bottom: 2rem;
       &:last-child{
@@ -269,6 +291,10 @@ $gutter-horizontal-small: 1.5rem;
       display: block;
       margin-bottom: $gutter-vertical/4 * 3;
     }
+    @include respond(mobile-large){
+      display: block;
+      margin-bottom: $gutter-vertical/4 * 3;
+    }
   }
 
   &__headtag {
@@ -287,10 +313,21 @@ $gutter-horizontal-small: 1.5rem;
       h2{font-size: 3.1rem;}
       h4{font-size: 1.85rem;padding-top: .8rem;}
     }
+    @include respond(mobile-large){
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: solid .2rem var(--textColor);
+      h2{font-size: 3.1rem;}
+      h4{font-size: 1.85rem;padding-top: .8rem;}
+    }
   }
   &__switch {
     display: flex;
     @include respond(mobile){
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include respond(mobile-large){
       justify-content: space-between;
       align-items: center;
     }
@@ -301,6 +338,9 @@ $gutter-horizontal-small: 1.5rem;
       margin-right: 0.5rem;
 
       @include respond(mobile){
+        font-size: 2rem;
+      }
+      @include respond(mobile-large){
         font-size: 2rem;
       }
     }
@@ -384,6 +424,9 @@ $gutter-horizontal-small: 1.5rem;
       @include respond(mobile){
         padding: 5rem 0;
       }
+      @include respond(mobile-large){
+        padding: 5rem 0;
+      }
 
       .social {
         width: max-content;
@@ -415,6 +458,9 @@ $gutter-horizontal-small: 1.5rem;
           @include respond(mobile) {
             font-size: 1.4rem;
           }
+          @include respond(mobile-large) {
+            font-size: 1.4rem;
+          }
         }
         
       }
@@ -444,6 +490,10 @@ $gutter-horizontal-small: 1.5rem;
             height: 0.8rem;
             width: 0.8rem;
           }
+          @include respond(mobile-large){
+            height: 0.8rem;
+            width: 0.8rem;
+          }
         }
 
         p {
@@ -456,6 +506,9 @@ $gutter-horizontal-small: 1.5rem;
             font-size: .6rem;
           }
           @include respond(mobile){
+            font-size: 1.4rem;
+          }
+          @include respond(mobile-large){
             font-size: 1.4rem;
           }
         }
@@ -479,6 +532,9 @@ $gutter-horizontal-small: 1.5rem;
         @include respond(mobile){
           font-size: 6rem;
         }
+        @include respond(mobile-large){
+          font-size: 6rem;
+        }
       }
 
       p {
@@ -493,6 +549,10 @@ $gutter-horizontal-small: 1.5rem;
         }
         
         @include respond(mobile){
+          font-size: 1.4rem;
+          letter-spacing: 0.6rem;
+        }
+        @include respond(mobile-large){
           font-size: 1.4rem;
           letter-spacing: 0.6rem;
         }
@@ -511,6 +571,10 @@ $gutter-horizontal-small: 1.5rem;
       border-top: 0.4rem solid;
 
       @include respond(mobile) {
+        border-radius: 0.6rem;
+        border-top: 0.6rem solid;
+      }
+      @include respond(mobile-large) {
         border-radius: 0.6rem;
         border-top: 0.6rem solid;
       }
@@ -536,6 +600,10 @@ $gutter-horizontal-small: 1.5rem;
           z-index: -1;
 
           @include respond(mobile){
+            top: -0.6rem;
+            border-radius: 0.6rem;
+          }
+          @include respond(mobile-large){
             top: -0.6rem;
             border-radius: 0.6rem;
           }
@@ -590,6 +658,9 @@ $gutter-horizontal-small: 1.5rem;
       @include respond(mobile){
         padding: 3rem 4rem 3rem 3rem;
       }
+      @include respond(mobile-large){
+        padding: 3rem 4rem 3rem 3rem;
+      }
 
       .metrics-title {
         margin-bottom: 2rem;
@@ -610,6 +681,9 @@ $gutter-horizontal-small: 1.5rem;
           @include respond(mobile){
             font-size: 1.6rem;
           }
+          @include respond(mobile-large){
+            font-size: 1.6rem;
+          }
         }
 
         img {
@@ -617,6 +691,9 @@ $gutter-horizontal-small: 1.5rem;
           width: auto;
 
           @include respond(mobile) {
+            height: 2.4rem;
+          }
+          @include respond(mobile-large) {
             height: 2.4rem;
           }
         }
@@ -651,6 +728,9 @@ $gutter-horizontal-small: 1.5rem;
           @include respond(mobile){
             font-size: 1.6rem;
           }
+          @include respond(mobile-large){
+            font-size: 1.6rem;
+          }
           
         }
 
@@ -672,6 +752,9 @@ $gutter-horizontal-small: 1.5rem;
             font-size: 2rem;
           }
           @include respond(mobile){
+            font-size: 3.8rem;
+          }
+          @include respond(mobile-large){
             font-size: 3.8rem;
           }
         }
