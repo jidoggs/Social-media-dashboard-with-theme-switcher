@@ -44,7 +44,9 @@ $borderYouTube: hsl(348, 97%, 39%);
 //media Queries
 @mixin respond($breakpoint) {
   @if $breakpoint == mobile {
-    @media screen and (max-width: 23.43751em) {
+    @media screen and (max-width: 23.5em) {
+      // old
+    // @media screen and (max-width: 23.43751em) { 
       //375px
       @content;
     }
